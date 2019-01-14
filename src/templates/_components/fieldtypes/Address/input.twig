@@ -38,18 +38,6 @@
         <div class="nsmFields-address-addressFieldsContainer" style="display:{{ value and value.countryCode ? 'block' : 'none'}}">
             {% if addressFields %}
                 {{ addressFields | raw }}
-                <div>
-                    <a class="fieldtoggle collapsed" data-target="{{ name }}-advanced">Place Data</a>
-                </div>
-                <div id="{{ name }}-advanced" class="hidden">
-                    {{ forms.textarea({
-                        label: 'Place Data',
-                        id: name ~ '-placeData',
-                        name: name ~ '[placeData]',
-                        rows: 20,
-                        value: value ? value.placeData
-                    }) }}
-                </div>
             {% endif %}
         </div>
 
